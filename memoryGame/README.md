@@ -5,7 +5,7 @@ A C++ and Raylib implementation of a classic memory matching game.
 ## Overview
 This project is a grid-based puzzle game where the player clicks to flip hidden cards and find matching pairs of numbers. Built utilizing standard C++ vectors and the Raylib framework for rendering and input handling.
 
-![Gameplay Demonstration](Animation.gif)
+<img src="Animation.gif" height="500">
 
 ## Mechanics
 * **Grid Generation:** Automatically generates pairs of numbers and randomly distributes them across a scalable grid (defaulting to 6x6).

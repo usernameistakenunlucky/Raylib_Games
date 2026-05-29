@@ -5,7 +5,7 @@ A C++ and Raylib implementation of the classic Snake arcade game.
 ## Overview
 This project is a grid-based game where the player controls a growing snake, attempting to consume fruit to increase their score and length without colliding with the walls or themselves. Built using standard C++ vectors and the Raylib framework.
 
-![Gameplay Demonstration](Animation.gif)
+<img src="Animation.gif" height="500">
 
 ## Mechanics
 * **Grid Movement:** The snake (`Player`) moves on a strict grid defined by `TILE_SIZE`. Movement updates sequentially across all body segments (`Piece`).

@@ -5,7 +5,7 @@ A C++ and Raylib implementation of a classic brick-breaking arcade game.
 ## Overview
 This project is an object-oriented 2D game where the player controls a paddle to bounce a ball, destroying brick formations across multiple levels. It features state management, collision detection, and user interface rendering using the Raylib framework.
 
-![Gameplay Demonstration](Animation.gif)
+<img src="Animation.gif" height="500">
 
 ## Mechanics
 * **State Management:** The game transitions between Play, Paused, Game Over, and Win states.
