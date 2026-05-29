@@ -5,7 +5,7 @@ A C++ and Raylib implementation of a random walk pathfinding algorithm on a 2D g
 ## Overview
 This project visualizes a naive random search algorithm attempting to find a path from a Start node (`S`, Green) to an End node (`E`, Blue) across a procedurally generated obstacle grid. The grid is constructed using standard C++ vectors, and rendering is handled by the Raylib framework.
 
-![Pathfinding Demonstration](Animation.gif)
+<img src="Animation.gif" height="500">
 
 ## Mechanics
 - **Grid Generation:** The map is populated with random obstacles (black squares) based on a defined percentage upon initialization or restart.
