@@ -6,7 +6,7 @@
 constexpr int TILE_SIZE = 110;
 
 // screen
-constexpr int SCREEN_WIDTH = 1280;
+constexpr int SCREEN_WIDTH = 960;
 constexpr int SCREEN_HEIGHT = 960;
 constexpr int GAME_SPEED = 10;
 

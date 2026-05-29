@@ -15,9 +15,9 @@ enum class GameState
 	hint,
 };
 
-constexpr int GRID_SIZE = 8; // mustbe even number
-constexpr int WINDOW_HEIGHT = (400 * 1.1);
-constexpr int WINDOW_WIDTH = 400;
+constexpr int GRID_SIZE = 6; // mustbe even number
+constexpr int WINDOW_HEIGHT = (800 * 1.1);
+constexpr int WINDOW_WIDTH = 800;
 constexpr int GAP = WINDOW_WIDTH * 0.02 / (GRID_SIZE * 0.5);
 
 constexpr int UI_SIZE = WINDOW_WIDTH * 0.07;

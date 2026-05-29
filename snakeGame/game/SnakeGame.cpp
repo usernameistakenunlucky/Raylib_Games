@@ -117,7 +117,7 @@ void SnakeGame::RenderBoard()
 
 		Vector2 start = Vector2{ (float)x, (float)yTop };
 		Vector2 end = Vector2{ (float)x, (float)yBottom };
-		DrawLineV(start, end, WHITE);
+		DrawLineEx(start, end, 4.f, WHITE);
 	}
 	// horozontal lines
 	for (int i = 0; i < SCREEN_HEIGHT / TILE_SIZE + 1; i++)
@@ -129,7 +129,7 @@ void SnakeGame::RenderBoard()
 
 		Vector2 start = Vector2{ (float)xLeft, (float)y };
 		Vector2 end = Vector2{ (float)xRight, (float)y };
-		DrawLineV(start, end, WHITE);
+		DrawLineEx(start, end, 4.f, WHITE);
 	}
 
 }
