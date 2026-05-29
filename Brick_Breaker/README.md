@@ -1,4 +1,4 @@
-# WallBreaker
+# Brick Breaker
 
 A C++ and Raylib implementation of a classic brick-breaking arcade game.
 
