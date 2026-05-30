@@ -5,13 +5,13 @@ Riley Bain
 
 ## Projects Included
 
-* **[AI Pathfinding](./AiPathfinding)** 
+* **[AI Pathfinding](./Random_Pathfinding)** 
   A visualization of a naive random search algorithm attempting to navigate a procedurally generated obstacle grid.
-* **[WallBreaker](./WallBreaker)** 
+* **[WallBreaker](./Brick_Breaker)** 
   A classic brick-breaking arcade game featuring state management, paddle reflection physics, and multiple hardcoded levels.
-* **[Memory Card Flip](./MemoryCardFlip)** 
+* **[Memory Card Flip](./Memory_Flip)** 
   A grid-based memory matching puzzle utilizing a hint system, attempt tracking, and state-driven card interactions.
-* **[Snake Game](./SnakeGame)** 
+* **[Snake Game](./Snake)** 
   A grid-based implementation of the classic Snake arcade game featuring dynamic tail growth and self-collision detection.
 
 ## Technical Details
