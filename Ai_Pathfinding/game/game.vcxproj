@@ -131,13 +131,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ai+GetNeightbours.cpp" />
+    <ClCompile Include="Ai+DFS.cpp" />
+    <ClCompile Include="Ai+GetNeighbors.cpp" />
     <ClCompile Include="Ai+GetRandomNode.cpp" />
-    <ClCompile Include="Ai+Interaction.cpp" />
     <ClCompile Include="Ai+RandomSearch.cpp" />
-    <ClCompile Include="Ai+RenderAll.cpp" />
     <ClCompile Include="Ai+Restart.cpp" />
-    <ClCompile Include="Ai+UpdateAll.cpp" />
+    <ClCompile Include="Ai+BFS.cpp" />
     <ClCompile Include="Ai.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

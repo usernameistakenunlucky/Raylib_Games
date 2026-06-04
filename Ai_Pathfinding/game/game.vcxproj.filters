@@ -24,22 +24,19 @@
     <ClCompile Include="Ai+GetRandomNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ai+UpdateAll.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ai+RenderAll.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ai+Interaction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Ai+Restart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ai+GetNeightbours.cpp">
+    <ClCompile Include="Ai+GetNeighbors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Ai+RandomSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ai+BFS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ai+DFS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

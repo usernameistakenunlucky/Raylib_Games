@@ -1,6 +1,6 @@
 #include "Ai.h"
 
-std::vector<Node*> Ai::GetNeighbours(Node* node)
+std::vector<Node*> Ai::GetNeighbors(Node* node)
 {
 	std::vector<Node*> neighbours;
 	int gridX = node->gridX;
@@ -13,7 +13,7 @@ std::vector<Node*> Ai::GetNeighbours(Node* node)
 
 	auto addIfValid = [&](int x, int y)
 		{
-			if (isWithinGrid(x, y) && (!grid[y][x].blocked || &grid[y][x] == end))
+			if (isWithinGrid(x, y) && (!grid[y][x].blocked || &grid[y][x] == endPoint))
 			{
 				neighbours.push_back(&grid[y][x]);
 			}

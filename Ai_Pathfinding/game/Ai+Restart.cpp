@@ -2,6 +2,8 @@
 
 void Ai::Restart()
 {
+	_state = AiState::waiting;
+
 	for (auto& row : grid)
 	{
 		for (auto& node : row)
@@ -22,15 +24,19 @@ void Ai::Restart()
 	currentPath.clear();
 	currentVisited.clear();
 	searchComplete = false;
+	bfsTracedPath.clear(); // clear old path so it doesn't persist after restart
+	drawBFSindex = 0;
+	dfsTracedPath.clear(); // same ^
+	drawDFSindex = 0;
 
 	//set points A and B
-	start = GetRandomNode();
-	start->fillColor = GREEN;
-	start->blocked = true;
-	start->displayText = "S";
+	startPoint = GetRandomNode();
+	startPoint->fillColor = GREEN;
+	startPoint->blocked = true;
+	startPoint->displayText = "S";
 
-	end = GetRandomNode();
-	end->fillColor = BLUE;
-	end->blocked = true;
-	end->displayText = "E";
+	endPoint = GetRandomNode();
+	endPoint->fillColor = BLUE;
+	endPoint->blocked = true;
+	endPoint->displayText = "E";
 }
