@@ -11,7 +11,7 @@ A C++ and Raylib implementation visualizing various pathfinding algorithms on a 
 <img src="dfsAnimation.gif" height="300">
 
 ### Random Search
-<img src="Animation.gif" height="300">
+<img src="randomAnimation.gif" height="300">
 
 ## Mechanics
 * **Grid Generation:** Generates a 20x20 grid where 25% of the nodes are randomly designated as solid black obstacles. 
