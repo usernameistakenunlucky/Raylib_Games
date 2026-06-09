@@ -4,9 +4,6 @@
 
 void Ai::BFS(Node* start, Node* end)
 {
-	// tell us if you found a path OR not
-	// and if you found one, populate the bfsTracedPath
-
 	if (_state == AiState::waiting)
 	{
 		bfsTracedPath.clear();

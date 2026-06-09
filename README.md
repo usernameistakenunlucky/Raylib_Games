@@ -6,7 +6,7 @@ Riley Bain
 ## Projects Included
 
 * **[AI Pathfinding](./Random_Pathfinding)** 
-  A visualization of a naive random search algorithm attempting to navigate a procedurally generated obstacle grid.
+  A visualization of various search algorithm attempting to navigate a procedurally generated obstacle grid.
 * **[WallBreaker](./Brick_Breaker)** 
   A classic brick-breaking arcade game featuring state management, paddle reflection physics, and multiple hardcoded levels.
 * **[Memory Card Flip](./Memory_Flip)** 

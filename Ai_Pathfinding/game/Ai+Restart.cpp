@@ -24,10 +24,27 @@ void Ai::Restart()
 	currentPath.clear();
 	currentVisited.clear();
 	searchComplete = false;
+
+	// bfs
 	bfsTracedPath.clear(); // clear old path so it doesn't persist after restart
 	drawBFSindex = 0;
+
+	// dfs
 	dfsTracedPath.clear(); // same ^
 	drawDFSindex = 0;
+
+	// djikstra
+	djikstraOpenSet = std::priority_queue<Node*, std::vector<Node*>, Compare>();
+	djikstraEndTrace = nullptr;
+	drawDjikstraIndex = 0;
+	djikstraTracedPath.clear();
+
+	// djikstra
+	aStarOpenSet = std::priority_queue<Node*, std::vector<Node*>, CompareAStar>();
+	aStarEndTrace = nullptr;
+	drawAStarIndex = 0;
+	aStarTracedPath.clear();
+
 
 	//set points A and B
 	startPoint = GetRandomNode();

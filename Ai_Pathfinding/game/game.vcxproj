@@ -131,12 +131,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ai+AStar.cpp" />
     <ClCompile Include="Ai+DFS.cpp" />
     <ClCompile Include="Ai+GetNeighbors.cpp" />
     <ClCompile Include="Ai+GetRandomNode.cpp" />
     <ClCompile Include="Ai+RandomSearch.cpp" />
     <ClCompile Include="Ai+Restart.cpp" />
     <ClCompile Include="Ai+BFS.cpp" />
+    <ClCompile Include="AI.+Djikstra.cpp" />
     <ClCompile Include="Ai.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

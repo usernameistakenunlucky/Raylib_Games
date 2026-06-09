@@ -3,6 +3,7 @@
 #include "raymath.h"
 #include "Definitions.h"
 #include <string>
+#include <float.h>
 
 struct Node
 {
@@ -22,8 +23,13 @@ struct Node
 	Node* parent = nullptr;
 	int step = 0;
 
-	NodeRenderState state = NodeRenderState::still;
+	float hCost = 0.f;
+	float gCost = FLT_MAX; //initialize each node's weight to infinity
+	float fCost = FLT_MAX; 
+
 	float animTimer = 0.f;
+
+	NodeRenderState state = NodeRenderState::still;
 
 	Node(int r, int c, bool b, Color fc = WHITE, Color oc = BLACK)
 		:
@@ -138,6 +144,9 @@ struct Node
 			blocked = false;
 			displayText = "";
 			fillColor = WHITE;
+			gCost = FLT_MAX;
+			hCost = 0.f;
+			fCost = FLT_MAX;
 		}
 
 		visited = false;

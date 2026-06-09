@@ -44,9 +44,48 @@ public:
 	Node* dfsEndTrace = nullptr;
 	int drawDFSindex = 0;
 	////////////////////////////////////////////
+	// Djikstra ////////////////////////////////
+	void Djikstra(Node* start, Node* end);
+	std::vector<Node*> djikstraTracedPath;
 
-	//void Djikstra(Node* start, Node* end);
-	//void AStar(Node* start, Node* end);
+	struct Compare // functor instead of lambda so i can use in header...
+	{
+		bool operator()(Node* a, Node* b)
+		{
+			return a->gCost > b->gCost;
+		}
+	};
+	std::priority_queue<Node*, std::vector<Node*>, Compare> djikstraOpenSet;
+
+	bool djikstraFoundEnd = false;
+	Node* djikstraEndTrace = nullptr;
+	int drawDjikstraIndex = 0;
+	////////////////////////////////////////////
+	// AStar ////////////////////////////////
+	void AStar(Node* start, Node* end);
+	std::vector<Node*> aStarTracedPath;
+
+	struct Heuristic 
+	{
+		float operator()(Node* a, Node* b)
+		{
+			return abs(a->gridX - b->gridX) + abs(a->gridY - b->gridY);
+		}
+	};
+	struct CompareAStar 
+	{
+		bool operator()(Node* a, Node* b)
+		{
+			return a->fCost > b->fCost || (a->fCost == b->fCost && a->hCost > b->hCost);
+		}
+	};
+	std::priority_queue<Node*, std::vector<Node*>, CompareAStar> aStarOpenSet;
+
+	bool aStarFoundEnd = false;
+	Node* aStarEndTrace = nullptr;
+	int drawAStarIndex = 0;
+	////////////////////////////////////////////
+	////////////////////////////////////////////
 
 	void RandomSearch(Node* start, Node* end);
 	std::vector<Node*> currentPath;

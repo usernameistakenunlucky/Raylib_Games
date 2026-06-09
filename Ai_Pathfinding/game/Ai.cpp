@@ -48,9 +48,12 @@ void Ai::Interaction()
 {
 	if (IsKeyPressed(KEY_X)) { Restart(); }
 	if (_state != AiState::waiting) { return; }
+
 	if (IsKeyPressed(KEY_R)) { RandomSearch(startPoint, endPoint); }
 	if (IsKeyPressed(KEY_B)) { BFS(startPoint, endPoint); }
 	if (IsKeyPressed(KEY_D)) { DFS(startPoint, endPoint); }
+	if (IsKeyPressed(KEY_J)) { Djikstra(startPoint, endPoint); }
+	if (IsKeyPressed(KEY_A)) { AStar(startPoint, endPoint); }
 }
 
 void Ai::UpdateAll()
@@ -62,7 +65,8 @@ void Ai::UpdateAll()
 	{
 	case AiState::BFS: { BFS(startPoint, endPoint); break; }
 	case AiState::DFS: { DFS(startPoint, endPoint); break; }
-	//case AiState::aStar: 
+	case AiState::djikstra: { Djikstra(startPoint, endPoint); break; }
+	case AiState::aStar: { AStar(startPoint, endPoint); break; }
 	}
 
 	for (auto& row : grid)
@@ -111,5 +115,32 @@ void Ai::RenderAll()
 	{
 		if (dfsTracedPath[i] == startPoint || dfsTracedPath[i] == endPoint) { continue; }
 		dfsTracedPath[i]->DrawPath(PATH_COLOR);
+	}
+
+	// Djikstra trace
+	if (_state == AiState::traceDjikstra && drawDjikstraIndex < djikstraTracedPath.size())
+	{
+		djikstraTracedPath[drawDjikstraIndex]->StartAnim();
+		drawDjikstraIndex++;
+		if (drawDjikstraIndex == djikstraTracedPath.size()) { _state = AiState::waiting; }
+	}
+
+	for (int i = 0; i < drawDjikstraIndex; i++)
+	{
+		if (djikstraTracedPath[i] == startPoint || djikstraTracedPath[i] == endPoint) { continue; }
+		djikstraTracedPath[i]->DrawPath(PATH_COLOR);
+	}
+
+	// AStar trace
+	if (_state == AiState::traceAStar && drawAStarIndex < aStarTracedPath.size())
+	{
+		aStarTracedPath[drawAStarIndex]->StartAnim();
+		drawAStarIndex++;
+		if (drawAStarIndex == aStarTracedPath.size()) { _state = AiState::waiting; }
+	}
+	for (int i = 0; i < drawAStarIndex; i++)
+	{
+		if (aStarTracedPath[i] == startPoint || aStarTracedPath[i] == endPoint) { continue; }
+		aStarTracedPath[i]->DrawPath(PATH_COLOR);
 	}
 }
