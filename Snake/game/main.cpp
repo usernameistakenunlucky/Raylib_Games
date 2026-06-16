@@ -9,11 +9,6 @@ int main(void)
 }
 
 /*
-  Allow the game to be played in any width/height
-  Make sure the enw spawned pickup (fruit) is not anywhere on the player
-  Make sure if the player loops back on itself, thegame is over
-  When the game is over, have a way to re-start the game
-  If the tail becomes too long that cover the whole screen, stop the game
- 
-  put everything into a nice repo with an animation
+9x16 mobile UI
+magic fruit = controls your char for 10 seconds using AStar. Each movement you need to run the AStar again.
 */
